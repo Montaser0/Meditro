@@ -1,0 +1,353 @@
+header {
+    margin-top: 0px;
+    background-color: aliceblue;
+    position: relative;
+}
+
+header svg {
+    animation: none !important;
+}
+
+
+header .row h5 {
+    color: var(--btn-color);
+    font-size: 20px;
+    margin: 80px 0px 10px 0px;
+}
+
+header h2 {
+    color: var(--main-color);
+    font-size: 40px;
+    margin: 30px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+header button {
+    background-color: var(--orange-color);
+    width: 180px;
+    height: 60px;
+    border: 1px solid var(--orange-color);
+    border-radius: 4px !important;
+    transition: 0.2s ease;
+    box-shadow: 0 8px 20px var(--orange-color);
+}
+
+header a {
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+header button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* أنيميشن للصورة العلوية فقط */
+header .main-image {
+    max-width: 100%;
+    width: 460px;
+    height: auto;
+    animation: mover 1s infinite alternate;
+    transition: 0.3s ease all;
+}
+
+/* تعطيل الأنيميشن على بقية الصور */
+header img:not(.main-image) {
+    animation: none;
+}
+
+header img {
+    max-width: 100%;
+    width: 430px;
+    height: auto;
+    animation: mover 1s infinite alternate;
+    transition: 0.3s ease all;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes move-to-right {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+header p svg {
+    color: var(--btn-color);
+    font-size: 60px;
+    position: absolute;
+    left: 0%;
+    top: 13%;
+    animation: mover 1s infinite alternate;
+    /* transform: rotate(45deg) !important; */
+}
+
+header .header-box {
+    position: relative;
+    max-width: 100%;
+}
+
+header .add {
+    width: 70px;
+    height: 70px;
+    margin-top: 40px;
+    margin-left: 300px;
+    animation: add 0.5s infinite alternate !important;
+}
+
+@keyframes add {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+header .seq2 {
+    width: 70px;
+    height: 70px;
+    margin-top: -180px;
+    margin-left: -60px;
+}
+
+@media only screen and (max-width: 760px) {
+    header .row h5 {
+        margin: 0px;
+    }
+
+    header h2 {
+        color: var(--main-color);
+        font-size: 30px;
+        margin: 30px 0;
+        font-weight: bold;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+    }
+
+    header button {
+        background-color: var(--orange-color);
+        width: 140px;
+        height: 50px;
+        border: 1px solid var(--orange-color);
+        border-radius: 4px !important;
+        transition: 0.2s ease;
+    }
+
+    header img {
+        max-width: 100%;
+        width: 300px;
+        height: auto;
+        margin-top: -15px;
+        animation: mover 1s infinite alternate;
+        transition: 0.3s ease all;
+    }
+
+    header svg {
+        display: none;
+        /* transform: rotate(45deg) !important; */
+    }
+
+    header .add,
+    .seq2 {
+        display: none;
+    }
+}
+
+/* تنسيق الصور الجانبية */
+/* تنسيق الصور الجانبية */
+.side1 {
+    border-radius: 0px 40px 40px 40px;
+    width: 200px;
+    height: 200px;
+    margin: 50px 0 0 60px;
+    object-fit: cover;
+}
+
+.side2 {
+    border-radius: 40px 0px 40px 40px;
+    width: 400px;
+    height: 250px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.side3 {
+    border-radius: 40px 40px 40px 0px;
+    width: 150px;
+    height: 150px;
+    margin: 30px 0 0 100px;
+    object-fit: cover;
+}
+
+/* تنسيق الحاوية الخاصة بالكروت */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+/* الشكل العام للكارت */
+.service-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 280px;
+    padding: 20px 25px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+
+
+/* تأثير hover على الكارت */
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* تكبير الأيقونة عند hover */
+.service-box:hover .service-icon {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* تنسيق الأيقونة */
+.service-icon {
+    margin-right: 12px;
+    font-size: 2rem;
+    color: var(--btn-color);
+    transition: transform 0.2s ease;
+}
+
+/* تنسيق عنوان الخدمة */
+.service-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* تخصيص ألوان الإطارات لكل فئة */
+.emergency {
+    border-color: #cfe5ff;
+}
+
+.emergency .service-icon {
+    color: #0d6efd;
+}
+
+.doctors {
+    border-color: #c4fcd8;
+}
+
+.doctors .service-icon {
+    color: #198754;
+}
+
+.professionals {
+    border-color: #ffe4e4;
+}
+
+.professionals .service-icon {
+    color: #dc3545;
+}
+
+.treatment {
+    border-color: #e6e6fa;
+}
+
+.treatment .service-icon {
+    color: #6f42c1;
+}
+header .row {
+    margin: 50px 0 0 50px; /* قيمة أصغر أو صفر */
+  }
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .services-container {
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .service-box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .service-icon {
+        font-size: 1.5rem;
+    }
+
+    .service-title {
+        font-size: 1rem;
+    }
+
+    .side1, .side2, .side3 {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    header .row {
+        margin: 50px 0 0 50px; /* قيمة أصغر أو صفر */
+      }
+}
+
+.bottun-2{
+    background-color: var(--orange-color);
+    width: 180px;
+    height: 60px;
+    border: 1px solid var(--orange-color);
+    border-radius: 4px !important;
+    transition: 0.2s ease;
+    box-shadow: 0 8px 20px var(--orange-color);
+    color: white;
+    font-weight: bold;
+}
+.bottun-2:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+.num{
+    font-size: 120px;
+    color: var(--btn-color);
+    font-weight: bold;
+}
+.num-down{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.num-cotainer{
+    /* border: 1px solid var(--main-color); */
+    margin-top: 20px;
+
+}

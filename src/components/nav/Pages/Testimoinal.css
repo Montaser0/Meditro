@@ -1,0 +1,190 @@
+.title-testimoinal{
+    color: var(--orange-color);
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+.h3-testimonal{
+    font-weight: 600;
+    font-size: 35px;
+    color: var(--main-color);
+    text-align: center;
+}
+.card-body{
+    padding: 40px !important;
+    margin-top: -20px;
+}
+.card-testimonial{
+    background-color: var(--orange-color) !important;
+    color: white !important;
+    border-radius: 30px 0 30px 30px !important;
+    height: 300px;
+    position: relative !important;
+    cursor: pointer;
+    margin: 100px 20px;
+}
+.card-h3{
+    font-size: 25px;
+    margin-top: 40px !important;
+    margin-bottom: -20px;
+    font-weight: bold;
+}
+.card-h4{
+    font-size: 18px;
+}
+  
+.card-testimonial::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    left: 40px;
+    width: 60px;
+    height: 60px;
+    color: var(--main-color);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23F17732' d='M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 50%;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.card-testimonial svg{
+    position: absolute;
+    left: 470px;
+    font-size: 80px !important;
+    bottom: 10px;
+    right: 10px !important;
+    opacity: 0.8;
+}
+
+/* استعلامات الوسائط لتجاوب التصميم */
+@media (max-width: 1024px) {
+  .card-testimonial{
+    margin: 40px 15px;
+    height: 280px;
+  }
+  .card-testimonial::before {
+    top: -35px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background-size: 35px;
+  }
+  .card-testimonial svg{
+    font-size: 70px !important;
+    left: auto;
+    right: 10px !important;
+    bottom: 5px;
+  }
+  .card-h3{
+    font-size: 22px;
+  }
+  .card-h4{
+    font-size: 16px;
+  }
+  .card-body{
+    padding: 30px !important;
+  }
+  .title-testimoinal{
+    font-size: 23px;
+  }
+  .h3-testimonal{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-testimonial{
+    margin: 30px 10px;
+    height: 100px;
+    padding:15px 10px 0 10px;
+  }
+  .card-testimonial::before {
+    top: -30px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-size: 30px;
+  }
+  .card-testimonial svg{
+    font-size: 60px !important;
+    right: 20px !important;
+    bottom: 5px;
+  }
+  .card-h3{
+    font-size: 20px;
+  }
+  .card-h4{
+    font-size: 14px;
+  }
+  .card-body{
+    padding: 20px !important;
+  }
+  .title-testimoinal{
+    font-size: 20px;
+  }
+  .h3-testimonal{
+    font-size: 26px;
+  }
+  header .row{
+    margin: 20px 0 0 5px; /* قيمة أصغر أو صفر */
+  }
+}
+/*
+right section
+*/
+/* الحاوية الأساسية */
+.hexagon-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: auto; /* لتوسيط العنصر في الصفحة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  /* الشكل السداسي في المنتصف */
+  .hexagon-center {
+    width: 200px;
+    height: 200px;
+    background-color: #fde3d9;
+    clip-path: polygon(
+      50% 0%,
+      90% 10%,
+      100% 50%,
+      90% 90%,
+      50% 100%,
+      10% 90%,
+      0% 50%,
+      10% 10%
+    );
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* العناصر الدائرية حول الشكل */
+  .hexagon-item {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    /* نستخدم المتغير --angle لتحديد الزاوية */
+    transform: rotate(var(--angle)) translate(220px) rotate(calc(-1 * var(--angle))); 
+    z-index: 2;
+  }
+  
+  /* الصور بداخل الدوائر */
+  .hexagon-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f17732; /* إطار برتقالي حول الصورة */
+  }
+  

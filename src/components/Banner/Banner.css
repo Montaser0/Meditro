@@ -1,0 +1,40 @@
+.banner{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 0;
+    background-color: rgba(58, 63, 211, 0.9);
+}
+.banner h2{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px 0;
+    line-height: 120px;
+}
+.banner li{
+    background-color:var(--orange-color);
+    border: 1px solid var(--main-color);
+    text-align: center;
+    color: white;
+    height: 50px;
+    border-radius: 8px;
+    width: 300px;
+    line-height: 50px;
+    margin: 1px auto;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.banner li a{
+    color: white;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.banner li a svg{
+    width: 20px;
+    margin-right: 10px;
+
+}

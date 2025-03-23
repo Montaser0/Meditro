@@ -1,0 +1,311 @@
+/* =========================== */
+/* Form section */
+/* =========================== */
+form {
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Inputs*/
+  form input,
+  form textarea,
+  form select {
+    width: 100%;
+    height: 50px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 8px;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* DropDwon*/
+  form select {
+    appearance: none;
+    padding-right: 35px;
+  }
+  
+  /* Focus on Inputs*/
+  form input:focus,
+  form textarea:focus,
+  form select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+    transform: scale(1.02);
+  }
+  
+  /* Submit Button*/
+  form button {
+    background-color: #ff6f00;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 111, 0, 0.3);
+  }
+  
+  form button:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(230, 92, 0, 0.4);
+  }
+  
+  /* custmize textarea */
+  form textarea {
+    height: 160px;
+    resize: vertical;
+  }
+  
+  /* validation form*/
+  form p {
+    color: white;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    background-color: rgb(179, 56, 56);
+    border: 1px solid rgb(194, 95, 95);
+    padding: 5px 0;
+  }
+  
+  /* form*/
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* responsive form*/
+  @media (max-width: 768px) {
+    form {
+      padding: 20px;
+    }
+    form input,
+    form textarea,
+    form select {
+      font-size: 14px;
+    }
+  }
+  
+  /* =========================== */
+  /*       Side Section  */
+  /* =========================== */
+  .side {
+    background: url('../../../assets/side.jpg');
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .side .overlay {
+    background-color: rgba(86, 90, 207, 0.9);
+    border-radius: 10px;
+    padding: 25px;
+    color: white;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+  
+  .side .overlay h3 {
+    font-size: 40px;
+    margin-bottom: 25px;
+    margin-top: 100px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .side .overlay strong {
+    font-size: 25px;
+  }
+  
+  .side .overlay .info-section svg {
+    font-size: 25px;
+  }
+  
+  .side .overlay .info-section p {
+    font-size: 17px;
+  }
+  
+  .side .overlay li {
+    font-size: 25px;
+    margin: 10px 0;
+    gap: 10px;
+    font-weight: bold;
+  }
+  
+  .side .overlay hr {
+    border: none;
+    height: 1px;
+    background-color: #fff;
+    margin: 20px 0;
+  }
+  
+  /* =========================== */
+  /*       قائمة الأيقونات الاجتماعية */
+  /* =========================== */
+  .social-icons ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+  }
+  
+  .social-icon {
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+  
+  /* =========================== */
+  /*    أزرار المودال للتحديث والانتقال */
+  /* =========================== */
+  .Uptade-model {
+    background-color: var(--orange-color) !important;
+    border: none !important;
+  }
+  .Uptade-model:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(230, 92, 0, 0.4);
+  }
+  .Go-model {
+    background-color: #565acf !important;
+    border: none !important;
+  }
+  .Go-model:hover {
+    background-color: #565acf;
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(88, 0, 230, 0.4);
+  }
+  
+  /* =========================== */
+  /*       تحسين تصميم الكروت */
+  /* =========================== */
+  .col .card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .col:hover .card {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* أيقونات الكروت مع الدائرة الخلفية */
+  .icon-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px 0;
+  }
+  
+  .Card-icon {
+    font-size: 40px;
+    position: relative;
+    z-index: 1;
+    color: #6c63ff !important;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* تأثير الاهتزاز عند hover على الكارت */
+  .col:hover .Card-icon {
+    animation: shake 0.5s ease infinite;
+  }
+  
+  /* الدائرة خلف الأيقونة */
+  .icon-container::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 12px;
+    width: 60px;
+    height: 60px;
+    background-color: #f6edff;
+    border-radius: 50%;
+    z-index: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  /* تأثير حركة الاهتزاز */
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+  }
+  
+  /* تنسيق النصوص داخل الكروت */
+  .card-title,
+  .card-subtitle,
+  .card-text {
+    text-align: center;
+  }
+  
+  .card-title {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .card-subtitle {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .card-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* =========================== */
+  /*      تنسيق flex للكروت في وسط الشاشة (للموبايل) */
+  /* =========================== */
+  .d-flex {
+    margin-top: 50px !important;
+    margin-left: 40px !important;
+  }
+  

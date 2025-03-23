@@ -1,0 +1,53 @@
+.form-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-color);
+    text-align: center;
+  }
+  
+  /* الصورة الرئيسية */
+  .person-img {
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 200px;
+    animation: mover 1s infinite alternate;
+    transition: all ease;
+  }
+  
+  /* الحركة */
+  @keyframes mover {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* استعلامات الوسائط لجعل التصميم متجاوبًا */
+  @media (max-width: 1024px) {
+    .person-img {
+      width: 100px;
+      margin-left: 150px;
+    }
+    .form-title {
+      font-size: 26px;
+    }
+    form{
+        width: 80%;
+        margin-left: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .person-img {
+        width: 250px;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+    .form-title {
+      font-size: 24px;
+    }
+  }
+  

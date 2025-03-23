@@ -1,0 +1,196 @@
+/* تصميم القسم */
+.working-process {
+  background-color: aliceblue;
+  padding: 40px 0;
+}
+
+/* الكارت */
+.process-card {
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  height: 100%;
+}
+
+.process-card:hover {
+  transform: translateY(-10px);
+}
+
+/* رقم الخطوة */
+.process-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--orange-color);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* العنوان */
+.process-title {
+  font-size: 1.4rem;
+  font-weight: bold !important;
+  color: var(--orange-color) !important;
+  opacity: 0.8;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.form select option:hover{
+  background-color: red;
+}
+/* النص */
+.process-text {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* زر العرض */
+.process-btn {
+  background-color: var(--orange-color) !important;
+  border: 1px solid var(--orange-color) !important;
+  width: 50حء;
+  height: 40px;
+  border-radius: 4px !important;
+  transition: 0.3s ease;
+  color: white;
+  font-weight: bold;
+}
+
+.process-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* تأثير الخلفية عند التحويم */
+.process-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to top, var(--orange-color) 0%, var(--orange-color) 100%);
+  transition: height 0.5s ease;
+}
+
+.process-card:hover::before {
+  height: 100%;
+}
+
+/* التأكد من أن النص والأزرار في المقدمة */
+.process-card .card-body {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* تغيير الألوان عند التحويم */
+.process-card:hover .process-btn {
+  background-color: white !important;
+  color: var(--orange-color);
+}
+
+.process-card:hover .process-text,
+.process-card:hover .process-title,
+.process-card:hover .process-number {
+  color: white !important;
+}
+
+/* الكارت النشط */
+.active-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-20px);
+}
+
+.active-card::before {
+  background: var(--orange-color);
+  height: 100%;
+}
+
+.active-card .process-text,
+.active-card .process-btn,
+.active-card .process-title,
+.active-card .process-number {
+  color: white !important;
+}
+
+.active-card .process-btn {
+  background-color: white !important;
+  color: var(--orange-color) !important;
+}
+
+/* تعطيل حركة الكارت النشط عند التحويم */
+.process-card:hover.active-card {
+  transform: translateY(0);
+}
+
+/* **التجاوب مع الأجهزة المختلفة** */
+
+/* الهواتف */
+@media (max-width: 767px) {
+  .process-card {
+      margin-bottom: 20px;
+  }
+
+  .process-title {
+      font-size: 1.2rem;
+  }
+
+  .process-number {
+      font-size: 1.8rem;
+  }
+
+  .process-text {
+      font-size: 0.9rem;
+  }
+
+  .process-btn {
+      height: 35px;
+      font-size: 0.9rem;
+  }
+}
+
+/* الأجهزة اللوحية */
+@media (min-width: 768px) and (max-width: 991px) {
+  .process-title {
+      font-size: 1.3rem;
+  }
+
+  .process-number {
+      font-size: 2.2rem;
+  }
+
+  .process-text {
+      font-size: 1rem;
+  }
+
+  .process-btn {
+      height: 38px;
+  }
+}
+
+/* الشاشات الكبيرة */
+@media (min-width: 992px) {
+  .process-title {
+      font-size: 1.5rem;
+  }
+
+  .process-number {
+      font-size: 2.5rem;
+  }
+
+  .process-btn {
+      height: 40px;
+  }
+}

@@ -1,0 +1,108 @@
+
+
+footer{
+    background-color: aliceblue;
+}
+
+footer .logo{
+width: auto;
+height: 50px;
+margin: 15px 0;
+}
+
+footer p{
+    font-size: 17px;
+}
+footer .footer-contact{
+    display: flex;
+}
+footer .footer-contact .footer-icon{
+    margin-right: 20px;
+}
+.footer-icon{
+    color: #fff;
+    background-color: var(--orange-color);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    /* border-radius: 50%; */
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 7px 20px 0 0;
+
+}
+.footer-icon svg{
+    align-items: center;
+    font-size: 20px;
+}
+footer .footer-contact h6{
+    color: var(--orange-color);
+    margin-bottom: 7px;
+}
+footer .footer-contact h4{
+    color: var(--main-color);
+    margin-top: 7px;
+    font-weight: bold;
+}
+footer h2{
+    color: var(--main-color);
+    max-width: 15px 0px;
+    font-size: 30px;
+}
+ul{
+    margin-top: 20px;
+}
+
+footer ul li {
+    margin-top: 20px;
+}
+footer ul li a {
+    color: #333;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+footer form{
+    margin: 20px 0;
+}
+footer form input{
+    border: 1px solid var(--main-color);
+    background-color: #fff;
+    margin: 10px 0 ;
+    width: 230px;
+    border-radius: 10px;
+    height: 50px;
+
+}
+footer form button{
+    width: 230px;
+    background-color: var(--orange-color) !important;
+    border: 1px solid var(--orange-color) !important;
+    color: #fff;
+    border-radius: 10px;
+    height: 50px;
+
+}
+.Social {
+    display: flex;
+    flex-wrap: wrap; /* يضمن عدم كسر التصميم */
+    gap: 5px; /* مسافة بين الأيقونات */
+    margin-right:20px;
+
+}
+.Social li a{
+    margin-right:20px;
+}
+
+footer .footer-bottom{
+    text-align: center;
+    margin: 25px;
+    padding: 10px 0;
+    border-top: 1px solid var(--main-color);
+}
+footer .footer-bottom p{
+    color: #333;
+    margin-top: 20px;
+}

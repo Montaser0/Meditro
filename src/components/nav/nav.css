@@ -1,0 +1,127 @@
+nav {
+    background-color: aliceblue;
+    width: 100%;
+    height: auto;
+    border-radius: 0px !important;
+    position: fixed;
+    z-index: 1000;
+}
+nav .navbar-nav a {
+    color: var(--main-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-right: 18px;
+    font-size: 17px;
+    transition: color 0.3s ease-in-out;
+    /* ✅ تأثير سلس */
+}
+
+nav .navbar-nav a:hover {
+    color: var(--orange-color) !important;
+    /* ✅ تغيير اللون إلى البرتقالي عند hover */
+}
+
+nav .navbar-nav {
+    margin-top: 12px;
+    
+}
+
+nav .navbar-nav .active {
+    color: var(--orange-colore) !important;
+}
+
+nav .navbar-nav svg:last-child {
+    margin-right: 8px;
+}
+
+.custom-button {
+    background-color: var(--btn-color) !important;
+    border: 1px solid var(--btn-color) !important;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: -10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.custom-button span {
+    background-color: #fff;
+    color: var(--btn-color);
+    width: 35px;
+    border-radius: 4px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.custom-button span svg{
+    margin-left: 5px;
+}
+.custom-button:hover {
+    background-color: var(--orange-color) !important;
+    transition: .1s ease all;
+}
+.custom-button span:hover{
+   color: var(--orange-color) !important;
+}
+.navbar-nav .dropdown-menu {
+    position: static;
+    background-color: #fff;
+    color: #fff;
+}
+
+.navbar-nav .dropdown-menu a {
+    color: #444;
+    font-size: 14px;
+    line-height: 30px !important;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    /* ✅ تأثير سلس */
+}
+
+.navbar-nav .dropdown-menu a:hover {
+    color: var(--orange-color) !important;
+}
+
+.navbar-nav .dropdown-menu li {
+    width: 100%;
+    height: 30px !important;
+    position: relative;
+}
+
+.navbar-nav .dropdown-menu li::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 4px;
+    background-color: var(--main-color);
+    bottom: 0;
+    /* ✅ تم إصلاح المشكلة */
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .dropdown-menu li:hover::before {
+    width: 100%;
+    /* ✅ التمدد عند hover */
+}
+
+@media only screen and (max-width:992) {
+    nav .navbar-nav .dropdown-menu {
+        width: 100%;
+    }
+
+    .custom-button {
+        margin-top: 0px;
+        width: 100%;
+    }
+}
